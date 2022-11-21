@@ -2,6 +2,7 @@ local M = {}
 
 local DEFAULT_COLORS = {
     comment = "#7970a9",
+    selection = "#44475a",
     menu = "#22212c",
     nontext = "#3b4048",
     visual = "#44475a",
@@ -14,7 +15,6 @@ local DEFAULT_COLORS = {
     pink = "#ff80bf",
     cyan = "#80ffea",
     white = "#f8f8f2",
-    selection = "#44475a",
     bright_red = "#ff6e6e",
     bright_green = "#a2ff99",
     bright_yellow = "#ffff99",
@@ -167,7 +167,6 @@ M.apply = function()
     highlight("WinSeparator", colors.purple)
 
     -- treesitter
-
     highlight("@annotation", colors.yellow)
     highlight("@attribute", colors.cyan)
     highlight("@boolean", colors.purple)
@@ -373,31 +372,31 @@ M.apply = function()
     highlight("CmpItemAbbrMatchFuzzy", colors.cyan, colors.menu)
     highlight_link("CmpItemAbbr", "Pmenu")
     highlight_link("CmpItemKind", "Pmenu")
-    highlight_link("CmpItemKindClass", "TSType")
-    highlight_link("CmpItemKindColor", "cssColor")
-    highlight_link("CmpItemKindConstant", "TSConstant")
-    highlight_link("CmpItemKindConstructor", "TSType")
-    highlight_link("CmpItemKindEnum", "TSField")
-    highlight_link("CmpItemKindEnumMember", "TSField")
-    highlight_link("CmpItemKindEvent", "TSConstant")
-    highlight_link("CmpItemKindField", "TSField")
-    highlight_link("CmpItemKindFile", "TSURI")
-    highlight_link("CmpItemKindFolder", "TSURI")
-    highlight_link("CmpItemKindFunction", "TSFunction")
-    highlight_link("CmpItemKindInterface", "TSType")
-    highlight_link("CmpItemKindKeyword", "TSKeyword")
-    highlight_link("CmpItemKindMethod", "TSMethod")
-    highlight_link("CmpItemKindModule", "TSNamespace")
-    highlight_link("CmpItemKindOperator", "TSOperator")
-    highlight_link("CmpItemKindProperty", "TSProperty")
-    highlight_link("CmpItemKindReference", "TSParameterReference")
-    highlight_link("CmpItemKindSnippet", "TSText")
-    highlight_link("CmpItemKindStruct", "TSStructure")
-    highlight_link("CmpItemKindText", "TSText")
-    highlight_link("CmpItemKindTypeParameter", "TSParameter")
-    highlight_link("CmpItemKindUnit", "TSField")
-    highlight_link("CmpItemKindValue", "TSField")
-    highlight_link("CmpItemKindVariable", "TSVariable")
+    highlight_link("CmpItemKindClass", "@type")
+    highlight_link("CmpItemKindColor", "DevIconCss")
+    highlight_link("CmpItemKindConstant", "@constant")
+    highlight_link("CmpItemKindConstructor", "@type")
+    highlight_link("CmpItemKindEnum", "@field")
+    highlight_link("CmpItemKindEnumMember", "@field")
+    highlight_link("CmpItemKindEvent", "@constant")
+    highlight_link("CmpItemKindField", "@field")
+    highlight_link("CmpItemKindFile", "@text.uri")
+    highlight_link("CmpItemKindFolder", "@text.uri")
+    highlight_link("CmpItemKindFunction", "@function")
+    highlight_link("CmpItemKindInterface", "@type")
+    highlight_link("CmpItemKindKeyword", "@keyword")
+    highlight_link("CmpItemKindMethod", "@method")
+    highlight_link("CmpItemKindModule", "@namespace")
+    highlight_link("CmpItemKindOperator", "@operator")
+    highlight_link("CmpItemKindProperty", "@property")
+    highlight_link("CmpItemKindReference", "@parameter.reference")
+    highlight_link("CmpItemKindSnippet", "@text")
+    highlight_link("CmpItemKindStruct", "@structure")
+    highlight_link("CmpItemKindText", "@text")
+    highlight_link("CmpItemKindTypeParameter", "@parameter")
+    highlight_link("CmpItemKindUnit", "@field")
+    highlight_link("CmpItemKindValue", "@field")
+    highlight_link("CmpItemKindVariable", "@variable")
     highlight_link("CmpItemMenu", "Pmenu")
 end
 
