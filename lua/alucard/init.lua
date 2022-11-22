@@ -354,8 +354,11 @@ M.apply = function()
     )
 
     --barbar
+    highlight("BufferCurrentIndex", colors.pink)
+    highlight("BufferCurrentSign", colors.pink)
     highlight("BufferCurrentTarget", colors.red)
     highlight("BufferInactiveTarget", colors.red)
+    highlight("BufferTabPages", colors.pink)
     highlight("BufferVisibleTarget", colors.red)
 
     -- nvim-cmp
